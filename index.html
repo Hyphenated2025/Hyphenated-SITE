@@ -1,50 +1,139 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Hyphenated</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* リセット & ベース */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #fff;
+      color: #222;
+      line-height:1.5;
+    }
+    a { color: inherit; text-decoration:none; }
+
+    /* ヘッダー */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+    }
+    header h1 {
+      font-size:1.5rem;
+      font-weight: normal;
+    }
+    header nav a {
+      margin-left: 1rem;
+      font-size:0.9rem;
+    }
+
+    /* Recent Lists セクション */
+    main {
+      max-width: 680px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .recent-lists h2 {
+      font-size:1.2rem;
+      margin-bottom:1rem;
+      border-bottom:2px solid #000;
+      display:inline-block;
+    }
+    .list {
+      list-style:none;
+      margin-top:1rem;
+    }
+    .list li + li {
+      margin-top:1.5rem;
+    }
+
+    .card {
+      display:flex;
+      align-items:flex-start;
+    }
+    .card img {
+      width: 80px;
+      height: 80px;
+      object-fit:cover;
+      border-radius:4px;
+      margin-right:1rem;
+      flex-shrink:0;
+    }
+    .card .info h3 {
+      font-size:1rem;
+      margin-bottom:0.4rem;
+    }
+    .card .info .meta {
+      font-size:0.85rem;
+      color:#555;
+    }
+    .card .info .meta .author {
+      margin-right:0.6rem;
+    }
+    .card .info .meta .date {
+      color:#999;
+    }
+
+    /* フッター */
+    footer {
+      text-align:center;
+      font-size:0.75rem;
+      color:#aaa;
+      margin:3rem 0 1rem;
+    }
+  </style>
 </head>
 <body>
-  <header class="header">
-    <a href="index.html">
-      <img src="public/logo.png" alt="Hyphenated Logo" class="logo">
-    </a>
+
+  <header>
+    <h1>Hyphenated</h1>
     <nav>
-      <a href="about.html" class="nav-link">About</a>
+      <a href="#">Log In</a>
+      <a href="#">Sign Up</a>
     </nav>
   </header>
 
-  <main class="main">
-    <h1>Recent Playlists</h1>
-
-    <ul class="playlist">
-      <li>
-        <strong>DJ Sample - Hyphenated Sound Vol.1</strong><br>
-        <small>2025.04.27</small>
-      </li>
-      <li>
-        <strong>DJ Sample - Hyphenated Sound Vol.2</strong><br>
-        <small>2025.04.26</small>
-      </li>
-      <li>
-        <strong>DJ Sample - Hyphenated Sound Vol.3</strong><br>
-        <small>2025.04.25</small>
-      </li>
-      <li>
-        <strong>DJ Sample - Hyphenated Sound Vol.4</strong><br>
-        <small>2025.04.24</small>
-      </li>
-      <li>
-        <strong>DJ Sample - Hyphenated Sound Vol.5</strong><br>
-        <small>2025.04.23</small>
-      </li>
-    </ul>
-
-    <div class="more-link">
-      <a href="#">More playlists →</a>
-    </div>
+  <main>
+    <section class="recent-lists">
+      <h2>Recent Lists</h2>
+      <ul class="list">
+        <li>
+          <a class="card" href="#">
+            <img src="public/dj1.jpg" alt="Nightclouds">
+            <div class="info">
+              <h3>Nightclouds</h3>
+              <p class="meta">
+                <span class="author">by vikingschoice</span>
+                <span class="date">April 28, 2025</span>
+              </p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="card" href="#">
+            <img src="public/dj2.jpg" alt="Hyper Real Radio">
+            <div class="info">
+              <h3>Hyper Real Radio – New Music Friday Picks, 28.04.25</h3>
+              <p class="meta">
+                <span class="author">by opiumhum</span>
+                <span class="date">April 28, 2025</span>
+              </p>
+            </div>
+          </a>
+        </li>
+        <!-- 以下、必要なだけ<li>をコピー＆編集 -->
+      </ul>
+    </section>
   </main>
+
+  <footer>
+    © 2025 Hyphenated
+  </footer>
+
 </body>
 </html>
