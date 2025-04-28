@@ -2,75 +2,49 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hyphenated</title>
-  <style>
-    body {
-      font-family: "Helvetica Neue", sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #111;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      padding: 20px;
-    }
-    header img {
-      height: 40px;
-    }
-    main {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-    .playlist {
-      margin-top: 30px;
-    }
-    .playlist-item {
-      border-bottom: 1px solid #eee;
-      padding: 10px 0;
-    }
-    .about-link {
-      display: block;
-      margin-top: 40px;
-      text-align: center;
-      font-size: 16px;
-      color: #666;
-      text-decoration: none;
-    }
-    .about-link:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="header">
+    <a href="index.html">
+      <img src="public/logo.png" alt="Hyphenated Logo" class="logo">
+    </a>
+    <nav>
+      <a href="about.html" class="nav-link">About</a>
+    </nav>
+  </header>
 
-<header>
-  <img src="ロゴ画像のパス" alt="Hyphenated Logo">
-</header>
+  <main class="main">
+    <h1>Recent Playlists</h1>
 
-<main>
-  <h1>Recent Playlists</h1>
+    <ul class="playlist">
+      <li>
+        <strong>DJ Sample - Hyphenated Sound Vol.1</strong><br>
+        <small>2025.04.27</small>
+      </li>
+      <li>
+        <strong>DJ Sample - Hyphenated Sound Vol.2</strong><br>
+        <small>2025.04.26</small>
+      </li>
+      <li>
+        <strong>DJ Sample - Hyphenated Sound Vol.3</strong><br>
+        <small>2025.04.25</small>
+      </li>
+      <li>
+        <strong>DJ Sample - Hyphenated Sound Vol.4</strong><br>
+        <small>2025.04.24</small>
+      </li>
+      <li>
+        <strong>DJ Sample - Hyphenated Sound Vol.5</strong><br>
+        <small>2025.04.23</small>
+      </li>
+    </ul>
 
-  <div class="playlist">
-    <div class="playlist-item">
-      <strong>DJ DDD - April 2025 Mix</strong><br>
-      April 28, 2025
+    <div class="more-link">
+      <a href="#">More playlists →</a>
     </div>
-    <div class="playlist-item">
-      <strong>DJ ABC - Spring Party</strong><br>
-      April 27, 2025
-    </div>
-    <!-- 以下どんどん追加 -->
-  </div>
-
-  <a class="about-link" href="#">About Us</a>
-</main>
-
+  </main>
 </body>
 </html>
