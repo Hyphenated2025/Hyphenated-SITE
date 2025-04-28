@@ -2,32 +2,73 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hyphenated</title>
   <style>
-    body { font-family: sans-serif; margin: 0; padding: 2rem; }
-    header img { height: 50px; }
-    .playlist { display: flex; gap: 1rem; margin-top: 2rem; }
-    .item img { width: 100px; height: 100px; object-fit: cover; }
+    /* 全体のベーススタイル */
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+    header {
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    /* ロゴ画像のサイズ調整 */
+    header img {
+      height: 40px;       /* お好みで調整 */
+      width: auto;
+    }
+    nav { /* 右側のリンクエリア */
+      font-size: 0.9rem;
+    }
+    nav a {
+      color: #000;
+      text-decoration: none;
+      margin-left: 1rem;
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <!-- public/logo.png を読み込む -->
-    <img src="/logo.png" alt="Hyphenated ロゴ">
+    <!-- ここを h1 から <img> に置き換え -->
+    <img src="logo.png" alt="Hyphenated Logo" />
+
+    <!-- 既存の Log In / Sign Up を残すならココ -->
+    <nav>
+      <a href="#">Log In</a> / <a href="#">Sign Up</a>
+    </nav>
   </header>
 
-  <h1>Recent Lists</h1>
-  <div class="playlist">
-    <div class="item">
-      <!-- public/thumb1.jpg -->
-      <img src="/thumb1.jpg" alt="Nightclouds">
-      <p><strong>Nightclouds</strong><br>by vikingschoice<br>April 28, 2025</p>
-    </div>
-    <!-- 他のアイテムも同様に -->
-  </div>
+  <main style="padding: 2rem;">
+    <!-- Recent Lists セクションなど -->
+    <h2 style="border-bottom:2px solid #000; display:inline-block;">
+      Recent Lists
+    </h2>
+    <ul style="list-style:none; padding:0; margin-top:1rem;">
+      <li style="display:flex; align-items:center; margin-bottom:1.5rem;">
+        <img src="placeholder1.jpg" alt="" style="width:80px; height:80px; object-fit:cover; margin-right:1rem;" />
+        <div>
+          <strong>Nightclouds</strong><br/>
+          <small>by vikingschoice  April 28, 2025</small>
+        </div>
+      </li>
+      <li style="display:flex; align-items:center;">
+        <img src="placeholder2.jpg" alt="" style="width:80px; height:80px; object-fit:cover; margin-right:1rem;" />
+        <div>
+          <strong>Hyper Real Radio – New Music Friday Picks, 28.04.25</strong><br/>
+          <small>by opiumhum  April 28, 2025</small>
+        </div>
+      </li>
+    </ul>
+  </main>
 
-  <footer style="margin-top:4rem; color:#888;">
+  <footer style="text-align:center; color:#888; padding:2rem 0;">
     © 2025 Hyphenated
   </footer>
+
 </body>
 </html>
