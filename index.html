@@ -1,69 +1,62 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hyphenated</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- ヘッダー -->
-  <header class="header">
-    <a href="index.html">
-      <img src="public/logo.png" alt="Hyphenated ロゴ" class="logo">
-    </a>
-    <nav>
-      <a href="about.html" class="nav-link">About us</a>
-    </nav>
+  <header class="site-header">
+    <div class="inner">
+      <h1 class="logo"><a href="#">Hyphenated</a></h1>
+      <nav class="auth-nav">
+        <a href="#" class="auth-link">Log In</a>
+        /
+        <a href="#" class="auth-link">Sign Up</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- メインコンテンツ -->
-  <main class="main">
-    <h1>Recent Playlists</h1>
+  <!-- メイン -->
+  <main class="site-main">
+    <div class="inner">
 
-    <ul class="playlist">
-      <li>
-        <img src="public/thumb1.jpg" alt="Playlist 1" class="thumb">
-        <div class="info">
-          <strong>DJ Sample – Hyphenated Vol.1</strong><br>
-          <small>2025.04.27</small>
-        </div>
-      </li>
-      <li>
-        <img src="public/thumb2.jpg" alt="Playlist 2" class="thumb">
-        <div class="info">
-          <strong>DJ Sample – Hyphenated Vol.2</strong><br>
-          <small>2025.04.26</small>
-        </div>
-      </li>
-      <li>
-        <img src="public/thumb3.jpg" alt="Playlist 3" class="thumb">
-        <div class="info">
-          <strong>DJ Sample – Hyphenated Vol.3</strong><br>
-          <small>2025.04.25</small>
-        </div>
-      </li>
-      <li>
-        <img src="public/thumb4.jpg" alt="Playlist 4" class="thumb">
-        <div class="info">
-          <strong>DJ Sample – Hyphenated Vol.4</strong><br>
-          <small>2025.04.24</small>
-        </div>
-      </li>
-      <li>
-        <img src="public/thumb5.jpg" alt="Playlist 5" class="thumb">
-        <div class="info">
-          <strong>DJ Sample – Hyphenated Vol.5</strong><br>
-          <small>2025.04.23</small>
-        </div>
-      </li>
-    </ul>
+      <h2 class="section-title">Recent Lists</h2>
 
-    <div class="more-link">
-      <a href="#">→ More playlists</a>
+      <ul class="playlist-list">
+        <li class="playlist-item">
+          <img src="thumb1.jpg" alt="" class="thumb" />
+          <div class="info">
+            <p class="title">Nightclouds</p>
+            <p class="meta">
+              by vikingschoice
+              <span class="date">April 28, 2025</span>
+            </p>
+          </div>
+        </li>
+        <li class="playlist-item">
+          <img src="thumb2.jpg" alt="" class="thumb" />
+          <div class="info">
+            <p class="title">Hyper Real Radio – New Music Friday Picks, 28.04.25</p>
+            <p class="meta">
+              by opiumhum
+              <span class="date">April 28, 2025</span>
+            </p>
+          </div>
+        </li>
+        <!-- 他のアイテムも同様に -->
+      </ul>
+
     </div>
   </main>
+
+  <!-- フッター -->
+  <footer class="site-footer">
+    <p>© 2025 Hyphenated</p>
+  </footer>
 
 </body>
 </html>
