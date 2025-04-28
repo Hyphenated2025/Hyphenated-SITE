@@ -5,9 +5,23 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Hyphenated</title>
   <style>
-    html,body{margin:0;padding:0;font-family:Impact,sans-serif;height:100%;}
-    body{display:flex;justify-content:center;align-items:center;background:#fff;overflow:hidden;}
-    h1{font-size:3rem;color:#B39DDB;margin:0 0 1rem;}
+-   html,body{margin:0;padding:0;font-family:Impact,sans-serif;height:100%;}
++   html,body{margin:0;padding:0;
++     /* フォントをもう少し細めに */
++     font-family:"Helvetica Neue",Arial,sans-serif;
++     height:100%;
++   }
+
+-   h1{font-size:3rem;color:#B39DDB;margin:0 0 1rem;}
++   h1{
++     font-size:3rem;
++     /* タイトルを黒に */
++     color:#000;
++     margin:0 0 1rem;
++     /* もう少し細めに */
++     font-weight:400;
++   }
+
     p{margin:.4rem 0;font-size:1.2rem}
     a{color:#000;text-decoration:underline}
 
@@ -17,7 +31,7 @@
       width:400px;height:400px;
       background:url('public/hf0331.png') center/contain no-repeat;
       animation:move 25s infinite alternate ease-in-out;
-      z-index:-1; /* 背面 */
+      z-index:-1;
     }
     @keyframes move{
       0%  {top:10%; left:15%;}
@@ -27,14 +41,29 @@
       80% {top:60%; left:10%;}
       100%{top:40%; left:50%;}
     }
+
+    /* ────────────────────────────── */
+    /* スライダーを縦表示に */
+-   .slider{ display:flex; overflow-x:auto; gap:1rem; padding-bottom:.5rem }
++   .slider{
++     display:flex;
++     flex-direction:column;   /* ← ここを変更 */
++     overflow-y:auto;         /* ← 縦スクロール */
++     max-height: 60vh;        /* 任意：高さ制限 */
++     gap:1rem;
++     padding-right:.5rem;     /* 縦スクロールで右に余白 */
++   }
+    /* ────────────────────────────── */
   </style>
 </head>
 <body>
   <div class="blob"></div>
 
   <main style="text-align:center;max-width:680px;">
+    <!-- 変更済み h1 -->
     <h1>Hyphenated</h1>
-    <p>From JPN OKAYAMA みんなで音をつなぐスペース。</p>
+
+    <p>From Okayama、みんなで音をつなぐスペース。</p>
     <p>岡山⇄日本⇄世界を往復しながら、</p>
     <p>ミュージシャン＆DJの最新プレイリストをアップ中！</p>
 
@@ -43,15 +72,15 @@
     </p>
 
     <section style="margin-top:2rem;">
-      <h2 style="font-size:1.5rem;margin:0 0 1rem;">DJ Charts（最新5件）</h2>
-      <div style="display:flex;overflow-x:auto;gap:1rem;padding-bottom:.5rem">
-        <!-- 5枚だけダミー -->
-        <img src="public/dj1.jpg"  alt="DJ1" style="width:180px;border-radius:8px"/>
-        <img src="public/dj2.jpg"  alt="DJ2" style="width:180px;border-radius:8px"/>
-        <img src="public/dj3.jpg"  alt="DJ3" style="width:180px;border-radius:8px"/>
-        <img src="public/dj4.jpg"  alt="DJ4" style="width:180px;border-radius:8px"/>
-        <img src="public/dj5.jpg"  alt="DJ5" style="width:180px;border-radius:8px"/>
-      </div>
+      <h2 style="font-size:1.5rem;margin:0 0 1rem;">Latest DJ Charts</h2>
+-     <div class="slider">
++     <div class="slider">
+        <img src="public/dj1.jpg" alt="DJ1" style="width:100%;border-radius:8px"/>
+        <img src="public/dj2.jpg" alt="DJ2" style="width:100%;border-radius:8px"/>
+        <img src="public/dj3.jpg" alt="DJ3" style="width:100%;border-radius:8px"/>
+        <img src="public/dj4.jpg" alt="DJ4" style="width:100%;border-radius:8px"/>
+        <img src="public/dj5.jpg" alt="DJ5" style="width:100%;border-radius:8px"/>
+     </div>
       <p><a href="archives.html">続きはこちら →</a></p>
     </section>
 
