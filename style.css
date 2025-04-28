@@ -1,1 +1,96 @@
+/*── リセット＆ベース ───────────────────────────────────────────*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #fff;
+  color: #111;
+  line-height: 1.6;
+}
 
+/*── ヘッダー ─────────────────────────────────────────────────*/
+.site-header {
+  border-bottom: 1px solid #e0e0e0;
+}
+.site-header .inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #111;
+  text-decoration: none;
+}
+.auth-nav {
+  font-size: 0.9rem;
+}
+.auth-link {
+  color: #333;
+  text-decoration: none;
+  margin: 0 0.25rem;
+}
+
+/*── メイン ───────────────────────────────────────────────────*/
+.site-main .inner {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* セクションタイトル */
+.section-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-bottom: 2px solid #111;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* プレイリストリスト */
+.playlist-list {
+  list-style: none;
+}
+.playlist-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.thumb {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  background: #f0f0f0;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.info {
+  margin-left: 1rem;
+}
+.title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+.meta {
+  font-size: 0.875rem;
+  color: #666;
+}
+.date {
+  margin-left: 0.5rem;
+}
+
+/*── フッター ─────────────────────────────────────────────────*/
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #999;
+  font-size: 0.875rem;
+}
