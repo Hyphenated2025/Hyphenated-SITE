@@ -2,73 +2,47 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hyphenated</title>
-  <style>
-    /* 全体のベーススタイル */
-    body {
-      margin: 0;
-      font-family: sans-serif;
-    }
-    header {
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    /* ロゴ画像のサイズ調整 */
-    header img {
-      height: 40px;       /* お好みで調整 */
-      width: auto;
-    }
-    nav { /* 右側のリンクエリア */
-      font-size: 0.9rem;
-    }
-    nav a {
-      color: #000;
-      text-decoration: none;
-      margin-left: 1rem;
-    }
-  </style>
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <!-- これをテキストから画像に差し替え -->
+    <a href="/" class="logo-link">
+      <img src="/logo.png" alt="Hyphenated Logo" class="site-logo" />
+    </a>
 
-  <header>
-    <!-- ここを h1 から <img> に置き換え -->
-    <img src="logo.png" alt="Hyphenated Logo" />
-
-    <!-- 既存の Log In / Sign Up を残すならココ -->
-    <nav>
-      <a href="#">Log In</a> / <a href="#">Sign Up</a>
+    <nav class="site-nav">
+      <a href="#">Log In</a>
+      <span>/</span>
+      <a href="#">Sign Up</a>
     </nav>
   </header>
 
-  <main style="padding: 2rem;">
-    <!-- Recent Lists セクションなど -->
-    <h2 style="border-bottom:2px solid #000; display:inline-block;">
-      Recent Lists
-    </h2>
-    <ul style="list-style:none; padding:0; margin-top:1rem;">
-      <li style="display:flex; align-items:center; margin-bottom:1.5rem;">
-        <img src="placeholder1.jpg" alt="" style="width:80px; height:80px; object-fit:cover; margin-right:1rem;" />
+  <main class="site-main">
+    <h2 class="recent-lists-title">Recent Lists</h2>
+    <ul class="recent-lists">
+      <li>
+        <img src="/sample-thumbnail1.png" alt="" class="thumb" />
         <div>
-          <strong>Nightclouds</strong><br/>
-          <small>by vikingschoice  April 28, 2025</small>
+          <strong>Nightclouds</strong><br />
+          by vikingschoice <span class="date">April 28, 2025</span>
         </div>
       </li>
-      <li style="display:flex; align-items:center;">
-        <img src="placeholder2.jpg" alt="" style="width:80px; height:80px; object-fit:cover; margin-right:1rem;" />
+      <li>
+        <img src="/sample-thumbnail2.png" alt="" class="thumb" />
         <div>
-          <strong>Hyper Real Radio – New Music Friday Picks, 28.04.25</strong><br/>
-          <small>by opiumhum  April 28, 2025</small>
+          <strong>Hyper Real Radio – New Music Friday Picks, 28.04.25</strong><br />
+          by opiumhum <span class="date">April 28, 2025</span>
         </div>
       </li>
+      <!-- …さらに追加… -->
     </ul>
   </main>
 
-  <footer style="text-align:center; color:#888; padding:2rem 0;">
+  <footer class="site-footer">
     © 2025 Hyphenated
   </footer>
-
 </body>
 </html>
