@@ -1,92 +1,139 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Hyphenated</title>
   <style>
--   html,body{margin:0;padding:0;font-family:Impact,sans-serif;height:100%;}
-+   html,body{margin:0;padding:0;
-+     /* フォントをもう少し細めに */
-+     font-family:"Helvetica Neue",Arial,sans-serif;
-+     height:100%;
-+   }
-
--   h1{font-size:3rem;color:#B39DDB;margin:0 0 1rem;}
-+   h1{
-+     font-size:3rem;
-+     /* タイトルを黒に */
-+     color:#000;
-+     margin:0 0 1rem;
-+     /* もう少し細めに */
-+     font-weight:400;
-+   }
-
-    p{margin:.4rem 0;font-size:1.2rem}
-    a{color:#000;text-decoration:underline}
-
-    /* 背景で動くブロブ */
-    .blob{
-      position:fixed;
-      width:400px;height:400px;
-      background:url('public/hf0331.png') center/contain no-repeat;
-      animation:move 25s infinite alternate ease-in-out;
-      z-index:-1;
+    /* リセット & ベース */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #fff;
+      color: #222;
+      line-height:1.5;
     }
-    @keyframes move{
-      0%  {top:10%; left:15%;}
-      20% {top:30%; left:70%;}
-      40% {top:70%; left:40%;}
-      60% {top:20%; left:80%;}
-      80% {top:60%; left:10%;}
-      100%{top:40%; left:50%;}
+    a { color: inherit; text-decoration:none; }
+
+    /* ヘッダー */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+    }
+    header h1 {
+      font-size:1.5rem;
+      font-weight: normal;
+    }
+    header nav a {
+      margin-left: 1rem;
+      font-size:0.9rem;
     }
 
-    /* ────────────────────────────── */
-    /* スライダーを縦表示に */
--   .slider{ display:flex; overflow-x:auto; gap:1rem; padding-bottom:.5rem }
-+   .slider{
-+     display:flex;
-+     flex-direction:column;   /* ← ここを変更 */
-+     overflow-y:auto;         /* ← 縦スクロール */
-+     max-height: 60vh;        /* 任意：高さ制限 */
-+     gap:1rem;
-+     padding-right:.5rem;     /* 縦スクロールで右に余白 */
-+   }
-    /* ────────────────────────────── */
+    /* Recent Lists セクション */
+    main {
+      max-width: 680px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .recent-lists h2 {
+      font-size:1.2rem;
+      margin-bottom:1rem;
+      border-bottom:2px solid #000;
+      display:inline-block;
+    }
+    .list {
+      list-style:none;
+      margin-top:1rem;
+    }
+    .list li + li {
+      margin-top:1.5rem;
+    }
+
+    .card {
+      display:flex;
+      align-items:flex-start;
+    }
+    .card img {
+      width: 80px;
+      height: 80px;
+      object-fit:cover;
+      border-radius:4px;
+      margin-right:1rem;
+      flex-shrink:0;
+    }
+    .card .info h3 {
+      font-size:1rem;
+      margin-bottom:0.4rem;
+    }
+    .card .info .meta {
+      font-size:0.85rem;
+      color:#555;
+    }
+    .card .info .meta .author {
+      margin-right:0.6rem;
+    }
+    .card .info .meta .date {
+      color:#999;
+    }
+
+    /* フッター */
+    footer {
+      text-align:center;
+      font-size:0.75rem;
+      color:#aaa;
+      margin:3rem 0 1rem;
+    }
   </style>
 </head>
 <body>
-  <div class="blob"></div>
 
-  <main style="text-align:center;max-width:680px;">
-    <!-- 変更済み h1 -->
+  <header>
     <h1>Hyphenated</h1>
+    <nav>
+      <a href="#">Log In</a>
+      <a href="#">Sign Up</a>
+    </nav>
+  </header>
 
-    <p>From Okayama、みんなで音をつなぐスペース。</p>
-    <p>岡山⇄日本⇄世界を往復しながら、</p>
-    <p>ミュージシャン＆DJの最新プレイリストをアップ中！</p>
-
-    <p style="margin-top:1.5rem;">
-      <a href="about.html">About us</a>
-    </p>
-
-    <section style="margin-top:2rem;">
-      <h2 style="font-size:1.5rem;margin:0 0 1rem;">Latest DJ Charts</h2>
--     <div class="slider">
-+     <div class="slider">
-        <img src="public/dj1.jpg" alt="DJ1" style="width:100%;border-radius:8px"/>
-        <img src="public/dj2.jpg" alt="DJ2" style="width:100%;border-radius:8px"/>
-        <img src="public/dj3.jpg" alt="DJ3" style="width:100%;border-radius:8px"/>
-        <img src="public/dj4.jpg" alt="DJ4" style="width:100%;border-radius:8px"/>
-        <img src="public/dj5.jpg" alt="DJ5" style="width:100%;border-radius:8px"/>
-     </div>
-      <p><a href="archives.html">続きはこちら →</a></p>
+  <main>
+    <section class="recent-lists">
+      <h2>Recent Lists</h2>
+      <ul class="list">
+        <li>
+          <a class="card" href="#">
+            <img src="public/dj1.jpg" alt="Nightclouds">
+            <div class="info">
+              <h3>Nightclouds</h3>
+              <p class="meta">
+                <span class="author">by vikingschoice</span>
+                <span class="date">April 28, 2025</span>
+              </p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="card" href="#">
+            <img src="public/dj2.jpg" alt="Hyper Real Radio">
+            <div class="info">
+              <h3>Hyper Real Radio – New Music Friday Picks, 28.04.25</h3>
+              <p class="meta">
+                <span class="author">by opiumhum</span>
+                <span class="date">April 28, 2025</span>
+              </p>
+            </div>
+          </a>
+        </li>
+        <!-- 以下、必要なだけ<li>をコピー＆編集 -->
+      </ul>
     </section>
-
-    <footer style="margin-top:2rem;font-size:.8rem;color:#777">
-      © 2025 Hyphenated
-    </footer>
   </main>
+
+  <footer>
+    © 2025 Hyphenated
+  </footer>
+
 </body>
 </html>
